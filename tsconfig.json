@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",            // Modern JavaScript target
+    "module": "CommonJS",          // Required for Node.js
+    "rootDir": ".",                // Root of your source files
+    "outDir": "dist",              // Compiled JS files output
+    "strict": true,                // Enable strict type checking
+    "esModuleInterop": true,       // For proper module imports
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": [
+    "server.ts",
+    "config/**/*.ts",
+    "routes/**/*.ts"
+  ]
+}
