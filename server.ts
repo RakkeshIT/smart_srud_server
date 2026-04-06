@@ -6,12 +6,16 @@ import add from './api/add'
 dotenv.config();
 const app: Application = express();
 
-app.use(cors());
+app.use(cors(
+    {
+        origin: ['http://localhost:3000', 'https://smart-crud-umber.vercel.app/']
+    }
+));
 app.use(express.json())
 
 connect();
 
-app.use('/api/add', add)
+app.use('/api', add)
 
 app.get("/", (req, res) => {
     res.send("Hello World")
