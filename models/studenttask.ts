@@ -71,10 +71,14 @@ const studentTaskSchema = new mongoose.Schema(
             }
         ],
 
-        attachments: [attachmentSchema]
+        attachments: [attachmentSchema],
+        draft: {
+            type: Boolean,
+            default: false,
+        },
     },
     {
-        timestamps: true // createdAt, updatedAt auto
+        timestamps: true,
     }
 );
 
