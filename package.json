@@ -11,14 +11,15 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "cloudinary": "^1.41.3",
+    "cloudinary": "^2.9.0",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "mongoose": "^9.0.0",
     "multer": "^2.1.1",
-    "multer-storage-cloudinary": "^4.0.0",
-    "nodemon": "^3.1.11"
+    "multer-storage-cloudinary": "^2.2.1",
+    "nodemon": "^3.1.11",
+    "path-to-regexp": "^8.4.2"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
