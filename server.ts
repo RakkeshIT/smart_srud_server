@@ -28,6 +28,12 @@ app.use((req, res) => {
     res.status(404).json({ message: "Not Found" });
 });
 
-app.listen(process.env.PORT, () => {
-    console.log(`Server is running on port ${process.env.PORT}`);
-})
+const isVercel = process.env.VERCEL === "1";
+
+if (!isVercel) {
+    app.listen(process.env.PORT || 5000, () => {
+        console.log("Server running");
+    });
+}
+
+export default app;
