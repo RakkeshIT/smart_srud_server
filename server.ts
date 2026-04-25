@@ -7,14 +7,13 @@ dotenv.config();
 const app: Application = express();
 
 app.use(cors({
-    origin: ['http://localhost:3000', 'https://smart-crud-umber.vercel.app'],
-    credentials: true,
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
+    origin: true,
+    credentials: true
 }));
 
+
 app.use(express.json())
-app.options(/.*/, cors());
+// app.options(/.*/, cors());
 
 connect();
 
