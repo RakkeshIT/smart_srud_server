@@ -15,6 +15,7 @@ app.use(cors({
 
 app.use(express.json())
 app.options(/.*/, cors());
+
 connect();
 
 app.use('/api', add)
