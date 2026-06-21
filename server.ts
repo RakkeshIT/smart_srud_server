@@ -7,9 +7,13 @@ import syllabus from './api/syllabus'
 dotenv.config();
 const app: Application = express();
 
+const ALLOW_ORIGIN = [
+    process.env.CLIENT_URL!,
+    process.env.CLIENT_URL_PROD!,
+]
 app.use(cors({
-    origin: true,
-    credentials: true
+    origin: ALLOW_ORIGIN,
+    credentials: true,
 }));
 
 
