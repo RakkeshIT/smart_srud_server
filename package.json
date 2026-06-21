@@ -21,6 +21,9 @@
     "nodemon": "^3.1.11",
     "path-to-regexp": "^8.4.2"
   },
+  "overrides":{
+    "mongodb": "6.20.0"
+  },
   "devDependencies": {
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
@@ -29,5 +32,6 @@
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.9.3"
   }
+  
 }
 
