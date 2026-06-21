@@ -20,7 +20,7 @@ app.use(cors({
 app.use(express.json())
 // app.options(/.*/, cors());
 
-connect();
+// connect();
 
 app.use('/api', add)
 app.use('/api', syllabus)
