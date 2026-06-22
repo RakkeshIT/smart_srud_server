@@ -11,14 +11,17 @@ const ALLOW_ORIGIN = [
     process.env.CLIENT_URL!,
     process.env.CLIENT_URL_PROD!,
 ]
-app.use(cors({
+
+const corsOptions = {
     origin: ALLOW_ORIGIN,
     credentials: true,
-}));
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+}
 
 
 app.use(express.json())
-// app.options(/.*/, cors());
+app.options('*', cors(corsOptions));
 
 connect();
 
